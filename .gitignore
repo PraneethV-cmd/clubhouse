@@ -1,6 +1,6 @@
 /clubhouse
 .clubhouse/
-menu/
+/menu/
 ._*
 .DS_Store
 site/public/
