@@ -27,7 +27,7 @@ Built on Codex's own extension points: **hooks**, an **MCP server**, and a **ski
 For most users:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/PraneethV-cmd/openai-hax/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/PraneethV-cmd/clubhouse/main/install.sh | sh
 clubhouse host
 ```
 

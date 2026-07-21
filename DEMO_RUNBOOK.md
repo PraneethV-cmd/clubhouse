@@ -5,7 +5,7 @@
 Run this once before presenting:
 
 ```sh
-cd /Volumes/abyss-brick/projects/openai-hax
+cd /path/to/clubhouse
 go build -o /tmp/clubhouse ./cmd/clubhouse
 install /tmp/clubhouse "$HOME/.local/bin/clubhouse"
 clubhouse check --fix

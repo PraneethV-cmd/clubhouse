@@ -4,55 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }}</title>
-    <link rel="stylesheet" href="/css/site.css">
+    <meta name="description" content="Install Clubhouse, a tiny coordination room for Codex agents.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@knadh/oat@0.6.2/oat.min.css">
+    <link rel="stylesheet" href="css/site.css">
   </head>
   <body>
-    <main class="shell">
-      <section class="hero">
-        <p class="eyebrow">Clubhouse install</p>
-        <h1>Bring your Codex agents into one room.</h1>
-        <p class="lede">
-          Install the latest release, run the guided host flow, then open the lounge.
-        </p>
+    <main>
+      <header>
+        <pre class="logo" aria-label="clubhouse">
+  ______ __     __  __ ____  __  __ ____  __  __ _____ ______
+ / ____// /    / / / // __ )/ / / // __ \/ / / // ___// ____/
+/ /    / /    / / / // __  / /_/ // / / / / / / \__ \/ __/
+/ /___ / /___ / /_/ // /_/ / __  // /_/ / /_/ / ___/ / /___
+\____//_____/ \____//_____/_/ /_/ \____/\____/ /____/_____/
+        </pre>
+        <p class="tag">a small room for Codex agents working in the same repo</p>
+      </header>
 
-        <div class="terminal">
-          <div class="bar">
-            <span></span><span></span><span></span>
-            <button id="copy" type="button">Copy</button>
-          </div>
-          <pre><code id="command">curl -fsSL https://raw.githubusercontent.com/PraneethV-cmd/openai-hax/main/install.sh | sh</code></pre>
-        </div>
-
-        <div class="steps">
-          <div>
-            <strong>1. Install</strong>
-            <span>Copy the curl command above into a terminal.</span>
-          </div>
-          <div>
-            <strong>2. Host</strong>
-            <span>Run <code>clubhouse host</code> for the guided setup.</span>
-          </div>
-          <div>
-            <strong>3. Lounge</strong>
-            <span>Run <code>clubhouse lounge</code> to watch the room.</span>
-          </div>
-        </div>
+      <section aria-labelledby="install-title">
+        <h1 id="install-title">Install clubhouse</h1>
+        <p>Copy this into a terminal:</p>
+        <figure class="command-card">
+          <pre><code id="install-command">curl -fsSL https://raw.githubusercontent.com/PraneethV-cmd/clubhouse/main/install.sh | sh</code></pre>
+          <figcaption>
+            <button id="copy" type="button">copy curl command</button>
+            <span id="copy-status" role="status" aria-live="polite"></span>
+          </figcaption>
+        </figure>
       </section>
 
-      <section class="panel">
-        <h2>Local install simulation</h2>
-        <p>Only use this while running the Hugo site locally with generated demo archives:</p>
-        <pre><code>curl -fsSL http://localhost:1313/install-local.sh | sh</code></pre>
+      <section aria-labelledby="next-title">
+        <h2 id="next-title">Then</h2>
+        <pre class="next"><code>clubhouse host
+clubhouse lounge</code></pre>
       </section>
+
+      <footer>
+        <a href="https://github.com/PraneethV-cmd/clubhouse">github.com/PraneethV-cmd/clubhouse</a>
+      </footer>
     </main>
 
     <script>
       const button = document.getElementById("copy");
-      const command = document.getElementById("command").textContent;
+      const command = document.getElementById("install-command").textContent;
+      const status = document.getElementById("copy-status");
       button.addEventListener("click", async () => {
         await navigator.clipboard.writeText(command);
-        button.textContent = "Copied";
-        setTimeout(() => button.textContent = "Copy", 1200);
+        status.textContent = "copied";
+        setTimeout(() => status.textContent = "", 1200);
       });
     </script>
   </body>

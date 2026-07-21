@@ -31,7 +31,8 @@ repo_paths=(
   "$ROOT/.clubhouse"
   "$ROOT/menu"
   "$ROOT/.context/bin/clubhouse"
-  "$ROOT/.context/site-release/clubhouse"
+  "$ROOT/.context/site-release"
+  "$ROOT/public"
   "$ROOT/site/public"
   "$ROOT/site/static/releases"
   "$ROOT/site/.hugo_build.lock"
@@ -100,7 +101,7 @@ remove_appledouble() {
 		else
 			say "would remove $path"
 		fi
-	done < <(find "$root" \( -path "$ROOT/.git" -o -path "$ROOT/.git/*" -o -path "$ROOT/.conductor" -o -path "$ROOT/.conductor/*" \) -prune -o -name '._*' -type f -print)
+	done < <(find "$root" \( -path "$ROOT/.conductor" -o -path "$ROOT/.conductor/*" \) -prune -o -name '._*' -type f -print)
 }
 
 say "Clubhouse cleanup root: $ROOT"

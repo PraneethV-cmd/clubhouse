@@ -1,9 +1,48 @@
+# local binaries and build output
 /clubhouse
+/dist/
+/bin/
+/public/
+node_modules/
+*.test
+
+# clubhouse runtime state
 .clubhouse/
 /menu/
-._*
-.DS_Store
+
+# local agent/workspace scratch
+.context/
+.vercel/
+
+# Hugo/generated website output
 site/public/
 site/resources/
 site/static/releases/
 site/.hugo_build.lock
+
+# secrets and machine-local config
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.agekey
+id_rsa
+id_ed25519
+*_token
+*_secret
+
+# logs and transient files
+*.log
+*.pid
+*.tmp
+*.swp
+*.swo
+
+# macOS metadata
+._*
+.DS_Store
+.vercel

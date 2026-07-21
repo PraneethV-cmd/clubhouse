@@ -12,10 +12,10 @@ the verification line passes.
   - Notes: Remove runtime files, generated Hugo output, release tarballs, and local binaries before the release commit.
 
 - [ ] Real fresh-install test
-  - Status: pending
+  - Status: in progress
   - Owner:
-  - Verification: On a clean user/machine, `curl -fsSL https://raw.githubusercontent.com/PraneethV-cmd/openai-hax/main/install.sh | sh` installs `clubhouse`, then `clubhouse host` succeeds.
-  - Notes: Requires a published GitHub Release with tarballs and `checksums.txt`.
+  - Verification: On a clean user/machine, `curl -fsSL https://raw.githubusercontent.com/PraneethV-cmd/clubhouse/main/install.sh | sh` installs `clubhouse`, then `clubhouse host` succeeds.
+  - Notes: Requires a published GitHub Release with tarballs and `checksums.txt`; latest local installer smoke uses the renamed `PraneethV-cmd/clubhouse` release assets.
 
 - [ ] Codex hook compatibility
   - Status: in progress

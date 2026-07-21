@@ -282,7 +282,7 @@ func cmdHost(args []string) {
 			huh.NewInput().
 				Title("Clubhouse name").
 				Description("Used when hosting this repo. This is the room name shown in the lounge.").
-				Placeholder("openai-hax clubhouse").
+				Placeholder("launch room").
 				Value(&roomName),
 			huh.NewSelect[string]().
 				Title("What do you want to do?").

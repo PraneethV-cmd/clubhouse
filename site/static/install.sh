@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -eu
 
-repo="${CLUBHOUSE_REPO:-PraneethV-cmd/openai-hax}"
+repo="${CLUBHOUSE_REPO:-PraneethV-cmd/clubhouse}"
 version="${CLUBHOUSE_VERSION:-latest}"
 install_dir="${CLUBHOUSE_INSTALL_DIR:-$HOME/.local/bin}"
 
