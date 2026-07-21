@@ -1,0 +1,42 @@
+version: 2
+
+project_name: clubhouse
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: clubhouse
+    main: ./cmd/clubhouse
+    binary: clubhouse
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+
+archives:
+  - id: clubhouse
+    ids:
+      - clubhouse
+    name_template: >-
+      {{ .ProjectName }}_
+      {{- .Os }}_
+      {{- .Arch }}
+    files:
+      - README.md
+      - install.sh
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"

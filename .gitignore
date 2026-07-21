@@ -1,0 +1,9 @@
+/clubhouse
+.clubhouse/
+menu/
+._*
+.DS_Store
+site/public/
+site/resources/
+site/static/releases/
+site/.hugo_build.lock

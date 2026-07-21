@@ -1,0 +1,7 @@
+baseURL = "http://localhost:1313/"
+locale = "en-us"
+title = "Clubhouse"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+[markup.goldmark.renderer]
+unsafe = true
